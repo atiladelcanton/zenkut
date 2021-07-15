@@ -1,5 +1,5 @@
-import { createGlobalStyle, ThemeProvider } from 'styled-components'
-import {AlurakutStyles} from '../src/lib/AlurakutCommons'
+import { createGlobalStyle, ThemeProvider } from "styled-components";
+import { AlurakutStyles } from "../src/lib/AlurakutCommons";
 const GlobalStyle = createGlobalStyle`
   *{
     margin: 0;
@@ -7,7 +7,8 @@ const GlobalStyle = createGlobalStyle`
     box-sizing: border-box;
   }
   body {
-    background: #ececec;
+    background: url('https://wallpapercave.com/wp/wp1827986.jpg') no-repeat ;
+    background-size: cover;
     font-family: sans-serif;
   }
   #__next{
@@ -21,13 +22,13 @@ const GlobalStyle = createGlobalStyle`
     display:block;
   }
   ${AlurakutStyles}
-`
+`;
 
 const theme = {
   colors: {
-    primary: '#0070f3',
+    primary: "#0070f3",
   },
-}
+};
 
 export default function App({ Component, pageProps }) {
   return (
@@ -37,5 +38,5 @@ export default function App({ Component, pageProps }) {
         <Component {...pageProps} />
       </ThemeProvider>
     </>
-  )
+  );
 }
